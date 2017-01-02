@@ -2,8 +2,8 @@
 //  Extensions.swift
 //  PasswordField
 //
-//  Created by Rick Dangerous on 1/2/17.
-//  Copyright © 2017 incirmedya. All rights reserved.
+//  Created by Yasin Turkdogan on 1/2/17.
+//  Copyright © 2017 Turkdogan. All rights reserved.
 //
 
 import Foundation
