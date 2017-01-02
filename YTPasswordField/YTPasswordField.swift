@@ -11,14 +11,15 @@ import Foundation
 
 @IBDesignable public class YTPasswordField : UITextField {
     
-    @IBInspectable var showPasswordIcon:UIImage = UIImage(named: "show.png")!;
-    @IBInspectable var hidePasswordIcon:UIImage = UIImage(named: "hide.png")!;
+    @IBInspectable var showPasswordIcon:UIImage = UIImage(named: "show.png", in: Bundle(for: YTPasswordField.self), compatibleWith: nil)!;
+    @IBInspectable var hidePasswordIcon:UIImage = UIImage(named: "hide.png", in: Bundle(for: YTPasswordField.self), compatibleWith: nil)!;
     @IBInspectable var safetyCheck:Bool = true;
     
     private let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 30);
-    private var toggleButton:UIButton!
+    private var toggleButton:UIButton = UIButton();
     
     private var defaultLevels:[(level:Int, color:UIColor, regexp:String)] = [
+        
         (level:1, color:UIColor.clear, regexp: ".{0,2}"),
         (level:2, color:UIColor.fromHex(0xFF0000), regexp: ".{2,6}"),
         (level:3, color:UIColor.fromHex(0xFF0000), regexp: ".{2,6}"),
@@ -31,7 +32,7 @@ import Foundation
     
     override public func awakeFromNib() {
         
-        toggleButton = UIButton(frame: CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height));
+        toggleButton.frame = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height);
         toggleButton.setImage(showPasswordIcon, for: UIControlState.normal);
         toggleButton.setImage(hidePasswordIcon, for: UIControlState.selected);
         toggleButton.isSelected = self.isSecureTextEntry
