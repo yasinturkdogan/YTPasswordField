@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
  
   s.ios.deployment_target = '8.0'
   s.source_files = 'YTPasswordField/*'
+  s.resources = 'YTPasswordField/Resources/*.png'
  
 end

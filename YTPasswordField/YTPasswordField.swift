@@ -11,8 +11,8 @@ import Foundation
 
 @IBDesignable public class YTPasswordField : UITextField {
     
-    @IBInspectable var showPasswordIcon:UIImage = UIImage(named: "show.png", in: Bundle(for: YTPasswordField.self), compatibleWith: nil)!;
-    @IBInspectable var hidePasswordIcon:UIImage = UIImage(named: "hide.png", in: Bundle(for: YTPasswordField.self), compatibleWith: nil)!;
+    @IBInspectable var showPasswordIcon:UIImage = UIImage(named: "show.png")!;
+    @IBInspectable var hidePasswordIcon:UIImage = UIImage(named: "hide.png")!;
     @IBInspectable var safetyCheck:Bool = true;
     
     private let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 30);
