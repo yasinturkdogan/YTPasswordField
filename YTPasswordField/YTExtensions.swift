@@ -3,7 +3,11 @@
 //  PasswordField
 //
 //  Created by Yasin Turkdogan on 1/2/17.
+<<<<<<< HEAD
 //  Copyright © 2017 turkdogan. All rights reserved.
+=======
+//  Copyright © 2017 Turkdogan. All rights reserved.
+>>>>>>> origin/master
 //
 
 import Foundation
